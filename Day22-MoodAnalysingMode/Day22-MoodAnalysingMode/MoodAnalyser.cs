@@ -23,7 +23,7 @@ namespace Day22_MoodAnalysingMode
             {
                 if (this.message.Equals(string.Empty))
                 {
-                    throw new Exception("The string is empty, you must enter something");
+                    throw new Exception("Mood should not be empty");
                 }
                 else if (this.message.ToUpper().Contains("SAD"))
                     return "SAD";
@@ -32,12 +32,13 @@ namespace Day22_MoodAnalysingMode
             }
             catch (Exception obj)
             {
+
                 Console.WriteLine(obj.Message);
             }
-            return "null";
+            return "HAPPY";
         }
-
     }
 }
+
 
 
