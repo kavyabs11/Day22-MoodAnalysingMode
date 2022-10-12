@@ -9,9 +9,17 @@ namespace Day22_MoodAnalysingMode
 
     public class MoodAnalyser
     {
-        public string analyseMood(string message)
+        private string message;
+        public MoodAnalyser() //default constructor
         {
-            if (message.ToUpper().Contains("SAD"))
+        }
+        public MoodAnalyser(string message) //parameterized constructor
+        {
+            this.message = message;
+        }
+        public string analyseMood()
+        {
+            if (this.message.Contains("sad"))
                 return "SAD";
             else
                 return "HAPPY";
