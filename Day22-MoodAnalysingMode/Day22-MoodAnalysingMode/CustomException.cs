@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace Day22_MoodAnalysingMode
 {
-
-
-    public class MoodAnalyserException : Exception
+    public class CustomException : Exception
     {
         public enum ExceptionType
         {
@@ -19,10 +17,10 @@ namespace Day22_MoodAnalysingMode
             NO_SUCH_CLASS,
             OBJECT_CREATION_ISSUE
         }
-        private readonly ExceptionType type;
-        public MoodAnalyserException(ExceptionType Type, String message) : base(message)
+        private readonly ExceptionType Type;
+        public CustomException(ExceptionType type, string message) : base(message)
         {
-            this.type = Type;
+            this.Type = type;
         }
     }
 }
