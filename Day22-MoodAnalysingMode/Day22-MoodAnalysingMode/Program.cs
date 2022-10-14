@@ -6,13 +6,10 @@
         {
 
             Console.WriteLine("Welcome to MoodAnalyser MSTesting");
-            Console.WriteLine("Enter your mood to check");
-            string mood = Console.ReadLine();
-            MoodAnalyser obj = new MoodAnalyser(mood);
-            if (obj.analyseMood() != null)
-                Console.WriteLine($"The user mood is {obj.analyseMood()}");
-            else
-                Console.WriteLine("The user mood is empty/null");
+            object expected = new MoodAnalyser(null);
+            object obj = MoodAnalyserReflection.CreateMoodAnalyser("MoodAnalyserMSTest.MoodAnalyser", "MoodAnalyser");
+            bool result = (expected.Equals(obj));
+            Console.WriteLine(result);
         }
     }
 }
