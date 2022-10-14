@@ -10,6 +10,7 @@
             object obj = MoodAnalyserReflection.CreateMoodAnalyser("MoodAnalyserMSTest.MoodAnalyser", "MoodAnalyser");
             bool result = (expected.Equals(obj));
             Console.WriteLine(result);
+            
         }
     }
 }
